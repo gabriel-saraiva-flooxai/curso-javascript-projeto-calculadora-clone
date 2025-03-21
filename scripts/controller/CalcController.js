@@ -24,10 +24,6 @@ class CalcController {
 
       }, 1000);
 
-      /*         setTimeout(() => {  matar o intervalo
-            clearInterval(interval);
-        }, 10000); */
-
     }
 
         addEventListenerAll(element, events, fn) {
@@ -70,6 +66,8 @@ class CalcController {
 
     addOperation(value){
 
+        console.log('TEST', value, isNaN(this.getLastOperation()));
+
         if (isNaN(this.getLastOperation())) {
 
             if (this.isOperator(value)) {
@@ -92,7 +90,6 @@ class CalcController {
             this.setLastOperation(parseInt(newValue));
         }
 
-        
 
         console.log(this._operation);
         
